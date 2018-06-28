@@ -24,3 +24,13 @@ end
 def remove_friend(person, name)
   person[:friends].delete(name)
 end
+
+def how_much_money(people)
+  money = 0
+  for person in people
+    if person[:monies] >= 0
+      money += person[:monies]
+    end
+  end
+  return money
+end
