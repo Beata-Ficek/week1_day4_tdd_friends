@@ -119,9 +119,25 @@ end
   # (hint: our function will probably need 3 arguments passed to it... the lender, the lendee, and the amount for this function)
   # (hint2: You should test if both the lender's and the lendee's money have changed, maybe two assertions?)
 
+  #what if the lender has less than the amount
+  def test_lend_money
+    result = lend_money(@person5, @person4, 10)
+    assert_equal(90, @person5[:monies])
+    assert_equal(30, @person4[:monies])
+  end
+
+
 
   # 8. Find the set of everyone's favourite food joined together
   # (hint: concatenate the favourites/snack arrays together)
+  def test_food_together
+    result = food_together(@people)
+    assert_equal("charcuterie, soup, bread, Scooby snacks, spaghetti, ratatouille, spinach", result)
+  end
+  # def test_food_together
+  #   result = food_together(@person5)
+  #   assert_equal("spinach", result)
+  # end
 
 
   # 9. Find people with no friends

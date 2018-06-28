@@ -34,3 +34,30 @@ def how_much_money(people)
   end
   return money
 end
+
+
+
+def lend_money(lender, lendee, amount)
+  lender[:monies] -= amount
+  lendee[:monies] += amount
+end
+#
+# def food_together(people)
+# food = ""
+#   for person in people
+#
+#     food + person[:favourites][:snacks][0]
+#   end
+#   puts food
+# end
+
+def food_together(people)
+   food = ""
+
+   for person in people
+     snacks_string = person[:favourites][:snacks].join(", ")
+     food << snacks_string + ", "
+   end
+   return food.chomp(", ")
+
+end
