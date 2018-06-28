@@ -18,6 +18,9 @@ def likes_food(person, food)
 end
 
 def add_friend(person, name)
-person[:friends].push(name)
+  person[:friends].push(name)
+end
 
+def remove_friend(person, name)
+  person[:friends].delete(name)
 end
