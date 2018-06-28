@@ -16,3 +16,8 @@ def likes_food(person, food)
     return false
   end
 end
+
+def add_friend(person, name)
+person[:friends].push(name)
+
+end
